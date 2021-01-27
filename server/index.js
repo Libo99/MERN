@@ -4,12 +4,11 @@ const helmet = require('helmet');
 const mongoose = require('mongoose');
 const morgan = require('morgan');
 const user = require('./Routes/UserRoutes');
+require('dotenv').config();
 
 const app = express();
-const MONGO_URI =
-  "mongodb+srv://Liban:LibanM10@user.2a86j.mongodb.net/User?retryWrites=true&w=majority"; 
 
-mongoose.connect(MONGO_URI, {
+mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
