@@ -1,10 +1,10 @@
-const express = require('express');
-const cors = require('cors');
-const helmet = require('helmet');
-const mongoose = require('mongoose');
-const morgan = require('morgan');
-const user = require('./Routes/UserRoutes');
-require('dotenv').config();
+const express = require("express");
+const cors = require("cors");
+const helmet = require("helmet");
+const mongoose = require("mongoose");
+const morgan = require("morgan");
+const user = require("./Routes/UserRoutes");
+require("dotenv").config();
 
 const app = express();
 
@@ -21,23 +21,19 @@ db.once("open", function () {
 });
 app.use(cors());
 app.use(helmet());
-app.use(morgan('common'));
+app.use(morgan("common"));
 app.use(express.json());
 
-
-
-app.get('/', (req, res) => {
-    res.json({
-        message: 'hej'
-    })
+app.get("/", (req, res) => {
+  res.json({
+    message: "hej",
+  });
 });
 
-app.use('/user', user);
-
-
+app.use("/user", user);
 
 const port = process.env.PORT || 6592;
 
 app.listen(port, () => {
-    console.log(`Listening on http://localhost:${port}`);
+  console.log(`Listening on http://localhost:${port}`);
 });
