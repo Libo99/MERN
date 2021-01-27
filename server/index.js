@@ -25,6 +25,7 @@ app.use(morgan('common'));
 app.use(express.json());
 
 
+
 app.get('/', (req, res) => {
     res.json({
         message: 'hej'
