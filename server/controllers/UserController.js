@@ -3,7 +3,7 @@ const User = require("../Models/User");
 exports.getUser = (req, res) => {
   User.find()
     .then((data) => res.json(data))
-    .catch((err) => res.status(404).json({ msg: "no user found" }));
+    .catch((err) => res.status(404).json({ msg: err }));
 };
 
 exports.createUser = (req, res) => {
@@ -17,7 +17,7 @@ exports.createUser = (req, res) => {
 
   user.save().then((data) =>
     res.status(201).json({
-      message: "User created!",
+      message: data,
     })
   );
 };

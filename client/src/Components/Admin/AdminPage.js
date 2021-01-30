@@ -16,6 +16,8 @@ const AdminPage = () => {
     getData();
   }, []);
 
+  
+
   return (
     <div>
       <ul>

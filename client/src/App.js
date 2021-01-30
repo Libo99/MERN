@@ -5,9 +5,9 @@ import Admin from './Components/Admin/AdminPage'
 function App() {
   return (
     <div className="App">
-      {/* <SignUp/>
-      <Login/> */}
-      <Admin/>
+      <SignUp/>
+      {/* <Login/> */}
+      {/* <Admin/> */}
     </div>
   );
 }
