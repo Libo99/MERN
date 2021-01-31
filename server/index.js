@@ -12,6 +12,7 @@ mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
+
 const db = mongoose.connection;
 
 db.on("error", console.error.bind(console, "Connection Error:"));
@@ -19,6 +20,7 @@ db.on("error", console.error.bind(console, "Connection Error:"));
 db.once("open", function () {
   console.log("Successfully connected to MongoDB!");
 });
+
 app.use(cors());
 app.use(helmet());
 app.use(morgan("common"));
