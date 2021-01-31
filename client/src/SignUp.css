@@ -20,7 +20,16 @@ form{
     margin: 0 auto;
     color: aliceblue;
     
-
     
-    
+}
+label, input{
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+button{
+    background-color: rgb(20, 101, 128);
+    border: none;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-size: 1.2rem;
 }
