@@ -26,6 +26,10 @@ const register = (e) => {
 }
 
   return (
+    <div className="signup">
+      <div className="header">
+        <h1>Sign up</h1>
+      </div>
     <div className="signup-container">
       <form className="signup">
         <label htmlFor="name">Name:</label>
@@ -41,6 +45,7 @@ const register = (e) => {
         <input onChange={(e) => setPassword(e.target.value)} type="password" id="password" name="password" required="required" />
         <button onClick={register}>Sign up</button>
       </form>
+    </div>
     </div>
   );
 };
