@@ -15,8 +15,8 @@ body {
 
 .signup{
   background-color:rgb(44, 44, 44);
-  width: 500px;
-  height: 400px;
+  width: 420px;
+  height: 500px;
   border-radius: 5px;
   box-shadow: 10px 10px black;
   
@@ -45,11 +45,16 @@ form {
   margin: 0 auto;
   align-items: center;
 }
-label,
-input {
+
+label{
   margin-bottom: 10px;
   font-size: 1.3rem;
   color:#fff;
+}
+input {
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+  color:black;
   
 }
 button {
@@ -61,5 +66,9 @@ button {
   width: 10rem;
   height: 2rem;
   color: black;
+  transition: 0.5s;
   
+}
+button:hover{
+  background-color: #fff;
 }

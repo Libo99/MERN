@@ -31,7 +31,7 @@ const register = (e) => {
         <h1>Sign up</h1>
       </div>
     <div className="signup-container">
-      <form className="signup">
+      <form className="form">
         <label htmlFor="name">Name:</label>
         <input onChange={(e) => setName(e.target.value)} type="text" id="name" name="name" required="required" />
 
