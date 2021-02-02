@@ -18,7 +18,7 @@ body {
   width: 420px;
   height: 500px;
   border-radius: 5px;
-  box-shadow: 10px 10px black;
+  box-shadow: 10px 10px 10px black;
   
 }
 
@@ -32,7 +32,7 @@ body {
   color: #fff;
   position: relative;
 }
-.signup-container {
+.form-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -52,7 +52,7 @@ label{
   color:#fff;
 }
 input {
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   font-size: 1.3rem;
   color:black;
   

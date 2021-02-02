@@ -30,7 +30,7 @@ const register = (e) => {
       <div className="header">
         <h1>Sign up</h1>
       </div>
-    <div className="signup-container">
+    <div className="form-container">
       <form className="form">
         <label htmlFor="name">Name:</label>
         <input onChange={(e) => setName(e.target.value)} type="text" id="name" name="name" required="required" />
