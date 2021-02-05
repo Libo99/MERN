@@ -1,25 +1,26 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+
 .container {
   margin: 0;
   padding: 0;
   /* background-color: rgb(231, 230, 230); */
-  height: 95vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url('./assets/bg.jpg');
+  background: url("./assets/bg.jpg");
   background-size: cover;
-  
-  
-  
 }
 
-.signup{
-  background-color:rgb(44, 44, 44);
+.signup {
+  background-color: rgb(44, 44, 44);
   width: 420px;
   height: 500px;
   border-radius: 5px;
   box-shadow: 10px 10px 10px rgb(97, 96, 96);
-  
 }
 
 .header {
@@ -36,7 +37,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  
 }
 
 form {
@@ -46,16 +46,15 @@ form {
   align-items: center;
 }
 
-label{
+label {
   margin-bottom: 10px;
   font-size: 1.3rem;
-  color:#fff;
+  color: #fff;
 }
 input {
   margin-bottom: 12px;
   font-size: 1.3rem;
-  color:black;
-  
+  color: black;
 }
 button {
   background-color: rgb(73, 73, 73);
@@ -67,8 +66,7 @@ button {
   height: 2rem;
   color: black;
   transition: 0.5s;
-  
 }
-button:hover{
+button:hover {
   background-color: #fff;
 }
