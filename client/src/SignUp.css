@@ -1,8 +1,8 @@
-body {
+.container {
   margin: 0;
   padding: 0;
   /* background-color: rgb(231, 230, 230); */
-  height: 100vh;
+  height: 95vh;
   display: flex;
   justify-content: center;
   align-items: center;
