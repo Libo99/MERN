@@ -7,9 +7,10 @@ const Login = () => {
   const [password, setPassword] = useState('');
 
   return (
+    <div id="container">
     <div className="Login">
       <h1 className="login-header">Login</h1>
-      <div className="Login-container">
+      <div id="form-container">
         <form>
           <label htmlFor="username">Username</label>
           <input type="text" name="username" id="username" onChange={(e) => setUserName(e.target.value)}/>
@@ -20,6 +21,7 @@ const Login = () => {
           <button type="submit">Login</button>
         </form>
       </div>
+    </div>
     </div>
   );
 };
