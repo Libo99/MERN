@@ -2,15 +2,35 @@ body{
     margin: 0;
     padding: 0;
 }
+.Login{
+height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+}
 
 .Login-container{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    background-color: grey;
+    height: 500px;
+    width: 400px;
+    border-radius: 5px;
+    box-shadow: 10px 10px 10px;
 }
 form{
     display: flex;
     flex-direction: column;
     margin: 0 auto;
+}
+.login-header{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 30%;
+
+}
+label{
+    color: black
 }
