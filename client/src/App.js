@@ -3,6 +3,7 @@ import SignUp from "./Components/SignUp";
 import Login from "./Components/Login";
 import Admin from "./Components/Admin/AdminPage";
 import NavBar from "./Components/NavBar";
+import Home from './Components/Home'
 import "react-router-dom";
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 function App() {
@@ -20,8 +21,6 @@ function App() {
   );
 }
 
-const Home = () => {
-  return <div><h1>home</h1></div>
-}
+
  
 export default App;
