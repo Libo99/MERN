@@ -6,6 +6,7 @@ import NavBar from "./Components/NavBar";
 import Home from './Components/Home'
 import "react-router-dom";
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
+
 function App() {
   return (
     <Router>
@@ -15,6 +16,7 @@ function App() {
           <Route path="/" exact component={Home} />
           <Route path="/Login" component={Login} />
           <Route path="/Signup" component={SignUp} />
+          <Route path="/Admin" component={Admin}/>
         </Switch>
       </div>
     </Router>

@@ -20,9 +20,10 @@ const AdminPage = () => {
 
   return (
     <div>
-      <ul>
-        {user.map((user) => (
-          <li key={`${user._id}`}>{`${user.username}`}</li>
+      <h1>Admin</h1>
+      <ul className="ul">
+        {user.map((user, index) => (
+          <li className="list" key={index}>{user.username}</li>
         ))}
       </ul>
     </div>
