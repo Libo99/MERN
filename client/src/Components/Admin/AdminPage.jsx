@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import './Admin.css';
 
 const AdminPage = () => {
   const [user, setUser] = useState([]);
@@ -19,8 +20,8 @@ const AdminPage = () => {
   
 
   return (
-    <div>
-      <h1>Admin</h1>
+    <div className="admin">
+      <h1 className="admin-header">Admin</h1>
       <ul className="ul">
         {user.map((user, index) => (
           <li className="list" key={index}>{user.username}</li>
