@@ -24,7 +24,7 @@ const AdminPage = () => {
       <h1 className="admin-header">Admin</h1>
       <ul className="ul">
         {user.map((user, index) => (
-          <li className="list" key={index}>{user.username}</li>
+          <li className="list" key={index}>{user.mail}</li>
         ))}
       </ul>
     </div>
