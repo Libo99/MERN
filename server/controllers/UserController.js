@@ -17,7 +17,7 @@ exports.createUser = (req, res) => {
 
   user.save().then((data) =>
     res.status(201).json({
-      message: data,
+      message: 'User Created Successfully',
     })
   );
 };
