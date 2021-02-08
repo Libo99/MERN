@@ -1,12 +1,12 @@
 const User = require("../Models/User");
 
-exports.getUser = (req, res) => {
+exports.GetUser = (req, res) => {
   User.find()
     .then((data) => res.json(data))
     .catch((err) => res.status(404).json({ msg: err }));
 };
 
-exports.createUser = (req, res) => {
+exports.CreateUser = (req, res) => {
   const user = new User({
     name: req.body.name.toString().trim(),
     username: req.body.username.toString().trim(),
@@ -15,9 +15,26 @@ exports.createUser = (req, res) => {
     created: Date.now(),
   });
 
-  user.save().then((data) =>
+  user.save().then(() =>
     res.status(201).json({
-      message: 'User Created Successfully',
+      message: "User Created Successfully",
     })
   );
 };
+
+exports.GetbyId = (req, res) => {
+  User.findById(req.params.id)
+    .then((user) => {
+      if (!user) {
+        return res.status(404).json({
+          message: "User not found",
+        });
+      }
+      return res.status(200).json(user);
+    })
+    .catch((err) => console.log(err));
+};
+
+exports.UpdateUser = (req, res) => {
+
+}
