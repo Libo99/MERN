@@ -8,7 +8,7 @@ const Home = () => {
       <div className="hero-header">
         <h3 className="hero-text">Welcome</h3>
         <a href="SignUp">
-          <button className="btn">Hej</button>
+          <button className="btn">Sign Up</button>
         </a>
       </div>
       <About />
