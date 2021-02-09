@@ -12,7 +12,6 @@ exports.CreateUser = (req, res) => {
     username: req.body.username.toString().trim(),
     mail: req.body.mail.toString().trim(),
     password: req.body.password.toString().trim(),
-    created: Date.now(),
   });
 
   user.save().then(() =>
@@ -36,12 +35,12 @@ exports.GetbyId = (req, res) => {
 };
 
 exports.DeleteUser = (req, res) => {
-User.findByIdAndDelete(req.params.id)
-.then(user => {
-  if(!user){
-    res.status(404).json({message: 'User Not Found'})
-  }
-  res.status(200).json({message: 'User is Successfully Deleted'})
-})
-.catch(err => console.log(err))
+  User.findByIdAndDelete(req.params.id)
+    .then((user) => {
+      if (!user) {
+        res.status(404).json({ message: "User Not Found" });
+      }
+      res.status(200).json({ message: "User is Successfully Deleted" });
+    })
+    .catch((err) => console.log(err));
 };

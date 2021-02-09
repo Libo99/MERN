@@ -19,7 +19,10 @@ const UserSchema = new Schema(
         type: String,
         required: true
     },
-    created: Date
+    created: {
+        type:Date,
+        default: Date.now()
+    }
 }, 
 {versionKey: false}
     
