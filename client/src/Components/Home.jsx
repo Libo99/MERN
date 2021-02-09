@@ -19,7 +19,7 @@ const Home = () => {
         </div>
         <div className="content">
           <div className="about-me">
-            <h1 className="h1">About me</h1>
+            <h3 className="h3">About me</h3>
             <p className="p">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,
               sit vel. At in atque tempora vel! Ipsa saepe quo repellat animi ab
