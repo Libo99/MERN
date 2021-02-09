@@ -1,4 +1,48 @@
-.Home-container{
-    display: flex;
-    justify-content: center;
+.Home-container {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+.hero-header {
+  background-image: url("https://cdn.pixabay.com/photo/2016/11/18/18/37/programming-1836330_960_720.png");
+  height: 80vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: gold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.hero-text {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.btn {
+  font-size: 1.5rem;
+  background-color: gold;
+  transition: 1s;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+.btn:hover {
+  background-color: white;
+}
+.About{
+    overflow: hidden;
+height: 80vh;
+width: 100%;
+background-color: grey;
+}
+
+.about-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
