@@ -34,11 +34,11 @@ a {
 .btn:hover {
   background-color: white;
 }
-.About{
-    overflow: hidden;
-height: 80vh;
-width: 100%;
-background-color: grey;
+.About {
+  overflow: hidden;
+  height: 80vh;
+  width: 100%;
+  background-color: grey;
 }
 
 .about-header {
