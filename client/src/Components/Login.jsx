@@ -12,7 +12,7 @@ const Login = () => {
       <h1 className="login-header">Login</h1>
       <div id="form-container">
         <form>
-          <label htmlFor="username">Username</label>
+          <label htmlFor="username">Username:</label>
           <input type="text" name="username" id="username" onChange={(e) => setUserName(e.target.value)}/>
 
           <label htmlFor="password">Password:</label>
