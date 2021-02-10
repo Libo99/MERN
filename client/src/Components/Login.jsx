@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Login.css";
+import Footer from './Footer';
 
 const Login = () => {
 
@@ -22,6 +23,7 @@ const Login = () => {
         </form>
       </div>
     </div>
+    <Footer/>
     </div>
   );
 };
