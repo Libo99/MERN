@@ -9,9 +9,9 @@ exports.GetUser = async (req, res) => {
 exports.CreateUser = async (req, res) => {
   const { mail } = req.body;
 
-  let um = await User.findOne({ mail });
+  let usermail = await User.findOne({ mail });
 
-  if (um) {
+  if (usermail) {
     return res.status(400).json({ message: "User Already Exists" });
   }
 
@@ -22,11 +22,15 @@ exports.CreateUser = async (req, res) => {
     password: req.body.password.toString().trim(),
   });
 
-  user.save().then(() =>
-    res.status(201).json({
-      message: "User Created Successfully",
-    })
-  );
+  try {
+    await user.save().then(() =>
+      res.status(201).json({
+        message: "User Created Successfully",
+      })
+    );
+  } catch (err) {
+    res.status(400).json(err.message);
+  }
 };
 
 exports.GetbyId = async (req, res) => {
