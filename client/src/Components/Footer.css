@@ -7,8 +7,8 @@
   width: 100%;
   overflow: hidden;
 }
-.footer-wrapper {
-}
+
 .footer-content {
   color: grey;
+  font-size: 1.3rem;
 }
