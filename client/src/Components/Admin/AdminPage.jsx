@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import './Admin.css';
-import Footer from "../Footer";
 
 
 const AdminPage = () => {
@@ -29,7 +28,6 @@ const AdminPage = () => {
           <li className="list" key={index}>{user.mail}</li>
         ))}
       </ul>
-      <Footer/>
     </div>
   );
 };
