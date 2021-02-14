@@ -1,6 +1,6 @@
 import React from "react";
 import SignUp from "./Components/SignUp/SignUp";
-import Login from "./Components/Login";
+import Login from "./Components/Login/Login";
 import Admin from "./Components/Admin/AdminPage";
 import NavBar from "./Components/NavBar";
 import Home from './Components/Home/Home';
