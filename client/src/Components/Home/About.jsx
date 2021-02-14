@@ -1,5 +1,6 @@
 import React from 'react';
 import './About.css';
+import List from './List';
 
 
 const About = () => {
@@ -25,6 +26,7 @@ const About = () => {
             src="https://www.w3schools.com/howto/img_avatar.png"
             alt="hej"
           />
+        <List/>
         </div>
       </div>
     );

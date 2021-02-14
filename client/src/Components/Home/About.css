@@ -23,8 +23,13 @@
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: right;
+  justify-content: flex-end;
+  
 }
+/* .about-me {
+  
+  
+} */
 .h3 {
   font-size: 2rem;
 }
@@ -37,12 +42,17 @@
   height: 350px;
   width: 300px;
   display: flex;
-  justify-content: center;
+  justify-content: right;
   align-items: center;
   transition: 1s ease-in;
 }
 
-.img:hover{
-    opacity: 0.8;
-    
+.img:hover {
+  opacity: 0.8;
+}
+
+.bullet-list {
+  font-size: 2rem;
+  top: 50%;
+  color: black;
 }
