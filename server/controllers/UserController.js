@@ -58,8 +58,7 @@ exports.UpdateUser = (req, res) => {
     .then((user) => {
       if (!user) {
         return res.status(404).json({
-          message:
-            "Cannot update User with id=${id}. Maybe User was not found!",
+          message: `Cannot update User with id= ${id}. Maybe User was not found!`,
         });
       }
       res.status(200).json({ message: "User updated Succesfully" });
