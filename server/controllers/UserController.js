@@ -46,6 +46,27 @@ exports.GetbyId = async (req, res) => {
     .catch((err) => console.log(err));
 };
 
+exports.UpdateUser = (req, res) => {
+  const id = req.params.id;
+  const updateduser = req.body;
+
+  if (!updateduser) {
+    return res.status(400).json({ message: "User Not Updated" });
+  }
+
+  User.findByIdAndUpdate(id, updateduser, { useFindAndModify: false })
+    .then((user) => {
+      if (!user) {
+        return res.status(404).json({
+          message:
+            "Cannot update User with id=${id}. Maybe User was not found!",
+        });
+      }
+      res.status(200).json({ message: "User updated Succesfully" });
+    })
+    .catch((err) => console.log(err));
+};
+
 exports.DeleteUser = async (req, res) => {
   await User.findByIdAndDelete(req.params.id)
     .then((user) => {
