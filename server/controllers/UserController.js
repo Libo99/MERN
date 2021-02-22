@@ -1,4 +1,5 @@
 const User = require("../Models/User");
+const google = require('google-auth-library');
 
 exports.GetUser = async (req, res) => {
   await User.find()
@@ -76,3 +77,8 @@ exports.DeleteUser = async (req, res) => {
     })
     .catch((err) => console.log(err));
 };
+
+
+exports.GoogleLogin = () => {
+
+}
