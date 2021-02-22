@@ -1,37 +1,12 @@
 const User = require("../Models/User");
-const google = require('google-auth-library');
+const google = require("google-auth-library");
+const bcrypt = require("bcryptjs");
+const jwt = require("jsonwebtoken");
 
 exports.GetUser = async (req, res) => {
   await User.find()
     .then((data) => res.json(data))
     .catch((err) => res.status(404).json({ msg: err }));
-};
-
-exports.CreateUser = async (req, res) => {
-  const { mail } = req.body;
-
-  let usermail = await User.findOne({ mail });
-
-  if (usermail) {
-    return res.status(400).json({ message: "User Already Exists" });
-  }
-
-  const user = new User({
-    name: req.body.name.toString().trim(),
-    username: req.body.username.toString().trim(),
-    mail: req.body.mail.toString().trim(),
-    password: req.body.password.toString().trim(),
-  });
-
-  try {
-    await user.save().then(() =>
-      res.status(201).json({
-        message: "User Created Successfully",
-      })
-    );
-  } catch (err) {
-    res.status(400).json(err.message);
-  }
 };
 
 exports.GetbyId = async (req, res) => {
@@ -78,7 +53,61 @@ exports.DeleteUser = async (req, res) => {
     .catch((err) => console.log(err));
 };
 
+exports.Login = async (req, res) => {
+  const { mail, password } = req.body;
 
-exports.GoogleLogin = () => {
+  try {
+    const existingUser = await User.findOne({ mail });
 
-}
+    if (!existingUser) {
+      return res.status(404).json({ message: "User does not exist" });
+    }
+
+    const isPasswordCorrect = await bcrypt.compare(
+      password,
+      existingUser.password
+    );
+
+    if (!isPasswordCorrect) {
+      return res.status(400).json({ message: "Invalid Credentials" });
+    }
+
+    const token = jwt.sign(
+      { mail: existingUser.mail, id: existingUser._id },
+      "test",
+      { expiresIn: "1h" }
+    );
+
+    res.status(200).json({ result: existingUser, token });
+  } catch (error) {
+    res.status(400).json({ message: "Something went wrong" });
+  }
+};
+
+exports.SignUp = async (req, res) => {
+  const { name, username, mail, password } = req.body;
+
+  let user = await User.findOne({ mail });
+
+  if (user) {
+    return res.status(400).json({ message: "User Already Exists" });
+  }
+
+  try {
+    const hashedPassword = await bcrypt.hash(password, 12);
+    const result = await User.create({
+      name,
+      username,
+      mail,
+      password: hashedPassword,
+    });
+    const token = jwt.sign({ mail: result.mail, id: result._id }, "test", {
+      expiresIn: "1h",
+    });
+    res.status(200).json({ result: user, token });
+  } catch (err) {
+    res.status(400).json(err.message);
+  }
+};
+
+// exports.GoogleLogin = () => {};
