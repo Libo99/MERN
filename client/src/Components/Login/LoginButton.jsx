@@ -5,7 +5,7 @@ export const LoginButton = () => {
   const { loginWithRedirect } = useAuth0();
 
   return (
-    <p style={{fontSize: '1.1rem', color: "whitesmoke" }} onClick={() => loginWithRedirect()}>
+    <p style={{fontSize: '1.1rem', color: "whitesmoke", cursor: 'pointer' }} onClick={() => loginWithRedirect()}>
       Fast Login
     </p>
   );
