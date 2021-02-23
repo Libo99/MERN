@@ -8,7 +8,7 @@ const Header = () => {
   return (
     <div className="hero-header">
       {isAuthenticated ? (
-        <h3 className="hero-text">Welcome {user.name}</h3>
+        <h1 >Welcome {user.name}</h1>
       ) : (
         <h3 className="hero-text">Welcome </h3>
       )}
