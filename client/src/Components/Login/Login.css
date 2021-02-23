@@ -1,10 +1,19 @@
+.login-page {
+  background: url("./../../assets/bg.jpg");
+  background-size: cover;
+  overflow: hidden;
+}
+.error{
+  display: flex;
+  justify-content: center;
+  color: red;
+  
+}
 #container {
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url("./../../assets/bg.jpg");
-  background-size: cover;
 }
 .Login {
   background-color: rgb(44, 44, 44);

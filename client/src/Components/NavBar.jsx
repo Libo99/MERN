@@ -20,10 +20,11 @@ const NavBar = () => {
         {!isAuthenticated ? <Link to="/signup">
           <li>Sign up</li>
         </Link> : null}
-        <Link to="admin">
+        {isAuthenticated ? <Link to="admin">
           <li>Admin</li>
-        </Link>
-        {isAuthenticated ? <Link><li><LogoutButton text="Logout"/></li></Link> : null}
+        </Link> : null}
+        
+        {isAuthenticated ? <Link to="/"><li><LogoutButton text="Logout"/></li></Link> : null}
       </ul>
     </nav>
   );

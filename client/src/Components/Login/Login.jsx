@@ -1,40 +1,44 @@
 import React, { useState } from "react";
 import "./Login.css";
 // import GoogleLogin from "react-google-login";
-// import axios from "axios";
+import axios from "axios";
 import LoginButton from './LoginButton';
 
 const Login = () => {
   const [mail, setMail] = useState("");
   const [password, setPassword] = useState("");
+  // const [error, setError] = useState('');
   const url = "http://localhost:6592/user/login";
 
-  // const GoogleSuccess = (res) => {
-  //   console.log(res);
-  //   axios.post(url, {
-  //     data: {tokenId: res.tokenId}
-  //   }).then(res => console.log(res))
-  //   ;
-  // };
-  // const GoogleError = (res) => {
-  //   console.log("Sign in was unsuccessful");
-  // };
-
-  const Handechange = (e) => {
-  e.preventDefault();
+  const user = {
+    mail: mail,
+    password: password
   }
 
+  const HandeSubmit = (e) => {
+  e.preventDefault();
+  axios.post(url, user).then(res => console.log(res))
+  .catch(err => {
+    // setError(err.message);
+    console.log(err);
+  })
+  
+}
+
   return (
-    <div id="container">
+    <div className="login-page">
+      {/* {error && <h3 className="error">{error}</h3>} */}
+    <div id="container">    
       <div className="Login">
         <h1 className="login-header">Login</h1>
         <div id="form-container">
-          <form onSubmit={Handechange}>
+          <form onSubmit={HandeSubmit}>
             <label htmlFor="mail">Mail:</label>
             <input
               type="text"
               name="mail"
               id="mail"
+              value={mail}
               onChange={(e) => setMail(e.target.value)}
             />
 
@@ -43,27 +47,17 @@ const Login = () => {
               type="password"
               name="password"
               id="password"
+              value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
-
             <button className="form-button" type="submit">
               Login
             </button>
-
-            {/* <GoogleLogin
-              clientId="311552585779-lc65857lq7vdnkosuf1a2agsc6n40mab.apps.googleusercontent.com"
-              render={(renderProps) => (
-                <button onClick={renderProps.onClick}>Google Login</button>
-              )}
-              buttonText="Login"
-              onSuccess={GoogleSuccess}
-              onFailure={GoogleError}
-              cookiePolicy={"single_host_origin"}
-            /> */}
             <LoginButton />
           </form>
         </div>
       </div>
+    </div>
     </div>
   );
 };
