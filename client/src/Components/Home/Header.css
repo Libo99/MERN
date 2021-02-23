@@ -21,6 +21,8 @@
   background-color: gold;
   transition: 1s;
   width: 130px;
+  border: none;
+  border-radius: 5px;
 }
 
 a {

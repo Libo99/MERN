@@ -65,7 +65,7 @@ const SignUp = () => {
               name="password"
               required="required"
             />
-            <button onClick={register}>Sign up</button>
+            <button className="form-button" onClick={register}>Sign up</button>
           </form>
         </div>
       </div>

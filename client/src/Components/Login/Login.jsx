@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Login.css";
 // import GoogleLogin from "react-google-login";
 // import axios from "axios";
+import LoginButton from './LoginButton';
 
 const Login = () => {
   const [mail, setMail] = useState("");
@@ -45,7 +46,9 @@ const Login = () => {
               onChange={(e) => setPassword(e.target.value)}
             />
 
-            <button type="submit">Login</button>
+            <button className="form-button" type="submit">
+              Login
+            </button>
 
             {/* <GoogleLogin
               clientId="311552585779-lc65857lq7vdnkosuf1a2agsc6n40mab.apps.googleusercontent.com"
@@ -57,6 +60,7 @@ const Login = () => {
               onFailure={GoogleError}
               cookiePolicy={"single_host_origin"}
             /> */}
+            <LoginButton />
           </form>
         </div>
       </div>
