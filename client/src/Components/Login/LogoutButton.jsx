@@ -5,7 +5,7 @@ const LogoutButton = (props) => {
   const { logout } = useAuth0();
 
   return (
-    <button onClick={() => logout({ returnTo: window.location.origin })}>
+    <button style={{}} onClick={() => logout({ returnTo: window.location.origin })}>
       {props.text}
     </button>
   );

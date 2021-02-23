@@ -78,7 +78,7 @@ exports.Login = async (req, res) => {
       { expiresIn: "1h" }
     );
 
-    res.status(200).json({ result: existingUser, token });
+    res.status(200).json({ result: existingUser.mail, token });
   } catch (error) {
     res.status(400).json({ message: "Something went wrong" });
   }
@@ -87,24 +87,32 @@ exports.Login = async (req, res) => {
 exports.SignUp = async (req, res) => {
   const { name, username, mail, password } = req.body;
 
-  let user = await User.findOne({ mail });
+  let email = await User.findOne({ mail });
 
-  if (user) {
+  if (email) {
     return res.status(400).json({ message: "User Already Exists" });
   }
 
   try {
     const hashedPassword = await bcrypt.hash(password, 12);
-    const result = await User.create({
+    // const result = await User.create({
+    //   name,
+    //   username,
+    //   mail,
+    //   password: hashedPassword,
+    // });
+    const user = new User({
       name,
       username,
       mail,
       password: hashedPassword,
     });
-    const token = jwt.sign({ mail: result.mail, id: result._id }, "test", {
+    await user.save()
+    
+    const token = jwt.sign({ mail: user.mail, id: user._id }, "test", {
       expiresIn: "1h",
     });
-    res.status(200).json({ result: user, token });
+    res.status(200).json({ user: user, token });
   } catch (err) {
     res.status(400).json(err.message);
   }
