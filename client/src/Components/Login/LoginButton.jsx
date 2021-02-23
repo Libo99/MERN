@@ -5,9 +5,9 @@ export const LoginButton = () => {
   const { loginWithRedirect } = useAuth0();
 
   return (
-    <button className="form-button" onClick={() => loginWithRedirect()}>
-      Log In
-    </button>
+    <p style={{fontSize: '1.1rem', color: "whitesmoke" }} onClick={() => loginWithRedirect()}>
+      Fast Login
+    </p>
   );
 };
 
