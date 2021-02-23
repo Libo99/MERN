@@ -3,6 +3,7 @@ import "./NavBar.css";
 import { Link } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
 import LogoutButton from '../Components/Login/LogoutButton';
+import LoginButton from "./Login/LoginButton";
 
 
 const NavBar = () => {
@@ -22,6 +23,11 @@ const NavBar = () => {
         </Link> : null}
         {isAuthenticated ? <Link to="admin">
           <li>Admin</li>
+        </Link> : null}
+
+        {
+        !isAuthenticated ? <Link to="/">
+          <LoginButton/>
         </Link> : null}
         
         {isAuthenticated ? <Link to="/"><li><LogoutButton text="Logout"/></li></Link> : null}
