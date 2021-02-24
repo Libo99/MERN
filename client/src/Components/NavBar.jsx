@@ -24,7 +24,7 @@ const NavBar = () => {
         {isAuthenticated ? <Link to="admin">
           <li>Admin</li>
         </Link> : null}
-
+        {isAuthenticated ? <Link to="todo"><li>Todos</li></Link> : null}
         {
         !isAuthenticated ? <Link to="/">
           <LoginButton/>

@@ -7,6 +7,7 @@ import Home from './Components/Home/Home';
 import Footer from './Components/Footer'
 import "react-router-dom";
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
+import TodoForm from "./Components/Todo/TodoForm";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/Login" component={Login} />
           <Route path="/Signup" component={SignUp} />
           <Route path="/Admin" component={Admin}/>
+          <Route path="/Todo" component={TodoForm}></Route>
         </Switch>
         <Footer/>
       </div>
