@@ -31,11 +31,11 @@ const TodoForm = () => {
               onChange={(e) => setTodo(e.target.value)}
               value={todo}
             />
-            <button type="submit">Add Todo</button>
+            <button className="todobtn" type="submit">Add Todo</button>
+            <TodoList todos={todos} />
           </form>
         </div>
         </div>
-        <TodoList todos={todos} />
       </div>
     );
 }

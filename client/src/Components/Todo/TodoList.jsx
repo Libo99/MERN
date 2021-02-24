@@ -6,9 +6,9 @@ function TodoList(props) {
     const {todos} = props;
     return (
         <div className="list-container">
-            <ul>
+            <ul className="todolist">
                 {todos.map((todo) => 
-                    <li key={todo.id}>{todo.text}</li>
+                    <li className="todos" key={todo.id}>{todo.text}</li>
                 )}
             </ul>
         </div>

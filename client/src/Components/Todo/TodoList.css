@@ -1,0 +1,15 @@
+.list-container {
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.todolist {
+  display: flex;
+  flex-direction: column;
+  right: 10%;
+  
+}
+.todos {
+  font-size: 1.3rem;
+}
