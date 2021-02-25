@@ -1,12 +1,20 @@
 import React from "react";
 import { withAuthenticationRequired } from "@auth0/auth0-react";
-import TodoForm from "./Todo/TodoForm";
 import Login from "./Login/Login";
+import {Route} from 'react-router-dom';
 
-const PrivateRoute = () => {
-  return <TodoForm />;
-};
+const PrivateRoute = ({ component, ...props }) => (
+  <Route
+    component={
+      withAuthenticationRequired(component,
+      {
+        onRedirecting: () => <Login />,
+      })
+    }
+    {...props}
+  />
+);
 
-export default withAuthenticationRequired(PrivateRoute, {
-  onRedirecting: () => <Login />,
-});
+
+
+export default PrivateRoute;
