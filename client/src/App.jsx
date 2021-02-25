@@ -9,6 +9,7 @@ import "react-router-dom";
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import TodoForm from "./Components/Todo/TodoForm";
 import PrivateRoute from "./Components/PrivateRoute";
+import Profile from "./Components/Profile";
 
 function App() {
   return (
@@ -19,10 +20,11 @@ function App() {
           <Route path="/" exact component={Home} />
           <Route path="/Login" component={Login} />
           <Route path="/Signup" component={SignUp} />
-          <Route path="/Admin" component={Admin}/>
-          <PrivateRoute path="/Todo" component={TodoForm}/>
+          <Route path="/Admin" component={Admin} />
+          <PrivateRoute path="/Todo" component={TodoForm} />
+          <PrivateRoute path="/Profile" component={Profile} />
         </Switch>
-        <Footer/>
+        <Footer />
       </div>
     </Router>
   );

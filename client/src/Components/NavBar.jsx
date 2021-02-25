@@ -29,6 +29,7 @@ const NavBar = () => {
         !isAuthenticated ? <Link to="/">
           <LoginButton/>
         </Link> : null}
+        {isAuthenticated ? <Link to="profile"><li>Profile</li></Link> : null}
         
         {isAuthenticated ? <Link to="/"><li><LogoutButton text="Logout"/></li></Link> : null}
       </ul>
