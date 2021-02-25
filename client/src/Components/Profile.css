@@ -1,42 +1,47 @@
-.profile{
-    height: 100vh;
-    padding: 0;
-    margin: 0;
+.profile {
+  height: 100vh;
+  padding: 0;
+  margin: 0;
 }
 
-.profile-container{
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.profile-container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.profilecard{
-    display: flex;
-    flex-direction: column;
-    background-color: grey;
-    border-radius: 5px;
-    width: 25%;
-    margin-top: 20px;
-    
+.profilecard {
+  display: flex;
+  flex-direction: column; 
+  background-color: grey;
+  border-radius: 5px;
+  width: 25%;
+  margin-top: 20px;
+  height: 500px;
+  align-items: center;
+  /* justify-content: center; */
 }
-.cardheader{
-    display: flex;
-    justify-content: center;
+.cardheader {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  
 }
-.pic{
-  height: 100px;  
+.pic {
+  height: 100px;
   width: 100px;
   border-radius: 5px;
 }
 
-
-.card-content{
-display: flex;
-
-flex-direction: column;
-align-items: center;
-
-
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
 }
 
+.card-bottom{
+
+}

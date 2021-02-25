@@ -12,9 +12,16 @@ const Profile = () => {
           <div className="cardheader">
             <img className="pic" src={picture} alt={name} />
           </div>
+          {/* <div className="card-content"> */}
+            <h3>
+              Name: {name}
+            </h3>
 
-          <div className="card-content">
-            <h3>Name: {name}</h3>
+            <h3>
+              Age: 21
+            </h3>
+          {/* </div> */}
+          <div className="card-bottom">
             <p>Mail: {email}</p>
           </div>
         </div>
