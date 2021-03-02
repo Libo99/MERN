@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "./SignUp.css";
+import styles from "../Button.module.css";
+
 import axios from "axios";
 
 const SignUp = () => {
@@ -65,7 +67,7 @@ const SignUp = () => {
               name="password"
               required="required"
             />
-            <button className="form-button" onClick={register}>Sign up</button>
+            <button className={styles.formbtn} onClick={register}>Sign up</button>
           </form>
         </div>
       </div>
