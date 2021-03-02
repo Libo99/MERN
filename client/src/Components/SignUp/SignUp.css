@@ -56,17 +56,3 @@ input {
   font-size: 1.3rem;
   color: black;
 }
-.form-button{
-  background-color: rgb(73, 73, 73);
-  border: none;
-  margin-top: 10px;
-  border-radius: 5px;
-  font-size: 1.2rem;
-  width: 10rem;
-  height: 2rem;
-  color: black;
-  transition: 0.5s;
-}
-.form-button:hover {
-  background-color: #fff;
-}
