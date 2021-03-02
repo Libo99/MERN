@@ -3,6 +3,8 @@ import "./Login.css";
 // import GoogleLogin from "react-google-login";
 import axios from "axios";
 import LoginButton from './LoginButton';
+import styles from "../Button.module.css";
+
 
 const Login = () => {
   const [mail, setMail] = useState("");
@@ -50,7 +52,7 @@ const Login = () => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
-            <button className="form-button" type="submit">
+            <button className={styles.formbtn} type="submit">
               Login
             </button>
             <LoginButton />
