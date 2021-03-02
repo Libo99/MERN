@@ -9,12 +9,19 @@
   color: black;
   transition: 0.5s;
 }
+.formbtn:hover {
+  background-color: white;
+}
 
-.home-button {
+.homebtn {
   font-size: 1.5rem;
   background-color: gold;
-  transition: 1s;
+  transition: .5s;
   width: 130px;
   border: none;
   border-radius: 5px;
+}
+
+.homebtn:hover{
+  background-color: white;
 }

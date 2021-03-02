@@ -1,6 +1,8 @@
 import React from "react";
 import "./Header.css";
 import { useAuth0 } from "@auth0/auth0-react";
+import styles from "../Button.module.css";
+
 
 const Header = () => {
   const { isAuthenticated, user } = useAuth0();
@@ -14,7 +16,7 @@ const Header = () => {
       )}
       {!isAuthenticated ? (
         <a href="SignUp">
-          <button className="btn">Sign Up</button>
+          <button className={styles.homebtn}>Sign Up</button>
         </a>
       ) : null}
     </div>
