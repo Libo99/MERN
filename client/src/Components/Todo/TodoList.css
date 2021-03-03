@@ -1,14 +1,22 @@
 .list-container {
   padding: 0;
   margin: 0;
-  position: relative;
+  position: absolute;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+  overflow: hidden;
+  right: 100%;
+
 }
 
 .todolist {
   display: flex;
   flex-direction: column;
-  right: 10%;
-  
+  /* height: 100px; */
 }
 .todos {
   font-size: 1.3rem;
