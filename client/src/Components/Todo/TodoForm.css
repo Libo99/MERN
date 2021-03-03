@@ -16,10 +16,12 @@
 
 .todoform {
   background: rgb(90, 90, 90);
-  height: 600px;
+  height: 400px;
   width: 500px;
   border-radius: 5px;
   box-shadow: 10px 10px 10px black;
+  margin: auto;
+  overflow: auto;
 }
 
 .formtodo {
@@ -28,17 +30,9 @@
   align-items: center;
   position: relative;
   flex-direction: column;
+  margin-bottom: 20px;
 }
 .todolabel {
   font-size: 1.3rem;
   color: black;
-}
-
-.todobtn {
-  background-color: grey;
-  font-size: 1.3rem;
-  border: none;
-  border-radius: 5px;
-  margin-top: 12px;
-  margin-bottom: 20px;
 }
