@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Login.css";
+// import "./Login.css";
 // import GoogleLogin from "react-google-login";
 import axios from "axios";
 import LoginButton from './LoginButton';
@@ -30,29 +30,35 @@ const Login = () => {
 }
 
   return (
-    
-      
-    <div className="container">    
-      <div className="Login">
-        <h1 className="login-header">Login</h1>
-        <div id="form-container">
-          <form onSubmit={HandeSubmit}>
-            <label htmlFor="mail">Mail:</label>
+    <div className={styles.container}>
+      <div className={styles.login}>
+        <div className={styles.header}>
+          <h1>Login</h1>
+        </div>
+        <div className={styles.formcontainer}>
+          <form onSubmit={HandeSubmit} className={styles.form}>
+            <label htmlFor="mail" className={styles.label}>
+              Mail:
+            </label>
             <input
               type="text"
               name="mail"
               id="mail"
               value={mail}
               onChange={(e) => setMail(e.target.value)}
+              className={styles.input}
             />
 
-            <label htmlFor="password">Password:</label>
+            <label htmlFor="password" className={styles.label}>
+              Password:
+            </label>
             <input
               type="password"
               name="password"
               id="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
+              className={styles.input}
             />
             <button className={styles.formbtn} type="submit">
               Login
@@ -62,7 +68,6 @@ const Login = () => {
         </div>
       </div>
     </div>
-    
   );
 };
 

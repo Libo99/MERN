@@ -16,7 +16,15 @@ body{
 
 }
 
-.signup, .login {
+.signup {
+  background-color: rgb(44, 44, 44);
+  width: 420px;
+  height: 500px;
+  border-radius: 5px;
+  box-shadow: 10px 10px 10px rgb(97, 96, 96);
+}
+
+.login {
   background-color: rgb(44, 44, 44);
   width: 420px;
   height: 500px;
@@ -33,6 +41,7 @@ body{
   font-size: 1.6rem;
   color: #fff;
 }
+
 .formcontainer {
   display: flex;
   align-items: center;
