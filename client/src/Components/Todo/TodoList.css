@@ -5,9 +5,9 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
-  margin-top: 100px;
+  /* margin-top: 100px; */
   overflow: hidden;
   right: 100%;
 
@@ -16,8 +16,9 @@
 .todolist {
   display: flex;
   flex-direction: column;
-  /* height: 100px; */
+  margin-right: 20px;
 }
 .todos {
   font-size: 1.3rem;
+  color: black;
 }
