@@ -15,7 +15,7 @@ function TodoList(props) {
               >
                 {todo.text}
               </li>
-              <button className="todobtn" onclick={todo.completed = !todo.completed}>completed</button>
+              <button className="todobtn" onClick={todo.completed = !todo.completed}>completed</button>
             </div>
           ))}
         </ul>
