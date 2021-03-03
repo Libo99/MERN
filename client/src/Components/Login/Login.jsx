@@ -3,7 +3,9 @@ import "./Login.css";
 // import GoogleLogin from "react-google-login";
 import axios from "axios";
 import LoginButton from './LoginButton';
-import styles from "../Button.module.css";
+// import styles from "../Button.module.css";
+import styles from "../Form.module.css";
+
 
 
 const Login = () => {
@@ -28,9 +30,9 @@ const Login = () => {
 }
 
   return (
-    <div className="login-page">
-      {/* {error && <h3 className="error">{error}</h3>} */}
-    <div id="container">    
+    
+      
+    <div className="container">    
       <div className="Login">
         <h1 className="login-header">Login</h1>
         <div id="form-container">
@@ -60,7 +62,7 @@ const Login = () => {
         </div>
       </div>
     </div>
-    </div>
+    
   );
 };
 

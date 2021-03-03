@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import "./SignUp.css";
-import styles from "../Button.module.css";
+import styles from "../Form.module.css";
 
 import axios from "axios";
 
@@ -25,49 +24,55 @@ const SignUp = () => {
   };
 
   return (
-    <div className="container">
-      <div className="signup">
-        <div className="header">
+    <div className={styles.container}>
+      <div className={styles.signup}>
+        <div className={styles.header}>
           <h1>Sign up</h1>
         </div>
-        <div className="form-container">
-          <form className="form">
-            <label htmlFor="name">Name:</label>
+        <div className={styles.formcontainer}>
+          <form className={styles.form}>
+            <label className={styles.label} htmlFor="name">Name:</label>
             <input
               onChange={(e) => setName(e.target.value)}
               type="text"
               id="name"
               name="name"
               required="required"
+              className={styles.input}
             />
 
-            <label htmlFor="username">Username:</label>
+            <label className={styles.label} htmlFor="username">Username:</label>
             <input
               onChange={(e) => setUserName(e.target.value)}
               type="text"
               id="username"
               name="username"
               required="required"
+              className={styles.input}
             />
 
-            <label htmlFor="mail">Mail:</label>
+            <label className={styles.label} htmlFor="mail">Mail:</label>
             <input
               onChange={(e) => setMail(e.target.value)}
               type="email"
               id="mail"
               name="mail"
               required="required"
+              className={styles.input}
             />
 
-            <label htmlFor="password">Password:</label>
+            <label className={styles.label} htmlFor="password">Password:</label>
             <input
               onChange={(e) => setPassword(e.target.value)}
               type="password"
               id="password"
               name="password"
               required="required"
+              className={styles.input}
             />
-            <button className={styles.formbtn} onClick={register}>Sign up</button>
+            <button className={styles.formbtn} onClick={register}>
+              Sign up
+            </button>
           </form>
         </div>
       </div>

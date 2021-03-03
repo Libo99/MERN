@@ -11,12 +11,12 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url("./../../assets/bg.jpg");
+  background: url("../assets/bg.jpg");
   background-size: cover;
 
 }
 
-.signup {
+.signup, .login {
   background-color: rgb(44, 44, 44);
   width: 420px;
   height: 500px;
@@ -33,26 +33,55 @@ body{
   font-size: 1.6rem;
   color: #fff;
 }
-.form-container {
+.formcontainer {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-form {
+.form {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
   align-items: center;
 }
 
-label {
+.label {
   margin-bottom: 10px;
   font-size: 1.3rem;
   color: #fff;
 }
-input {
+.input {
   margin-bottom: 12px;
   font-size: 1.3rem;
   color: black;
 }
+
+.formbtn {
+  background-color: rgb(73, 73, 73);
+  border: none;
+  margin-top: 10px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  width: 10rem;
+  height: 2rem;
+  color: black;
+  transition: 0.5s;
+}
+.formbtn:hover {
+  background-color: white;
+}
+
+.homebtn {
+  font-size: 1.5rem;
+  background-color: gold;
+  transition: .5s;
+  width: 130px;
+  border: none;
+  border-radius: 5px;
+}
+
+.homebtn:hover{
+  background-color: white;
+}
+
