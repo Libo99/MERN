@@ -1,4 +1,4 @@
-body{
+body {
   margin: 0;
   padding: 0;
 }
@@ -13,7 +13,6 @@ body{
   align-items: center;
   background: url("../assets/bg.jpg");
   background-size: cover;
-
 }
 
 .signup {
@@ -84,13 +83,12 @@ body{
 .homebtn {
   font-size: 1.5rem;
   background-color: gold;
-  transition: .5s;
+  transition: 0.5s;
   width: 130px;
   border: none;
   border-radius: 5px;
 }
 
-.homebtn:hover{
+.homebtn:hover {
   background-color: white;
 }
-
