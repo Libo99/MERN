@@ -31,6 +31,10 @@
   position: relative;
   flex-direction: column;
   margin-bottom: 20px;
+  
+}
+.todoin{
+  font-size: 1.2rem;
 }
 .todolabel {
   font-size: 1.3rem;

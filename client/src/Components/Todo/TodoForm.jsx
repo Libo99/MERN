@@ -40,6 +40,7 @@ const TodoForm = () => {
               id="todo"
               onChange={(e) => setTodo(e.target.value)}
               value={todo}
+              className="todoin"
             />
           </form>
         </div>
