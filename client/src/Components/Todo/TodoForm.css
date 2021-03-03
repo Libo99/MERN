@@ -24,9 +24,8 @@
 
 .formtodo {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
-  top: 10%;
   position: relative;
   flex-direction: column;
 }

@@ -21,20 +21,22 @@ const TodoForm = () => {
     }
     return (
       <div className="todo">
-          <div className="todo-container">
-        <div className="todoform">
-          <form className="formtodo" onSubmit={Handlesubmit}>
-            <label className="todolabel" htmlFor="todo">Add todo</label>
-            <input
-              type="text"
-              id="todo"
-              onChange={(e) => setTodo(e.target.value)}
-              value={todo}
-            />
-            <button className="todobtn" type="submit">Add Todo</button>
-            <TodoList todos={todos} />
-          </form>
-        </div>
+        <div className="todo-container">
+          <div className="todoform">
+          <TodoList todos={todos} />
+            <form className="formtodo" onSubmit={Handlesubmit}>
+              <label className="todolabel" htmlFor="todo">
+                Add todo
+              </label>
+              <input
+                type="text"
+                id="todo"
+                onChange={(e) => setTodo(e.target.value)}
+                value={todo}
+              />
+              
+            </form>
+          </div>
         </div>
       </div>
     );

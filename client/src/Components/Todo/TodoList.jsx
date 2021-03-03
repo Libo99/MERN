@@ -8,7 +8,7 @@ function TodoList(props) {
         <div className="list-container">
             <ul className="todolist">
                 {todos.map((todo) => 
-                    <li className="todos" key={todo.id}>{todo.text}</li>
+                    <li className="todos" key={todo.id} style={{textDecoration: todo.completed ? "line-through" : ""}}>{todo.text}</li>
                 )}
             </ul>
         </div>
