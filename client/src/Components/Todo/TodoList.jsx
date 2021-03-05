@@ -15,7 +15,7 @@ const TodoList = (props) => {
               >
                 {todo.text}
               </li>
-              <button className="todobtn" onClick={todo.completed = !todo.completed}>completed</button>
+              <button className="todobtn" onClick={todo.completed = !todo.completed}>Complete</button>
             </div>
           ))}
         </ul>
