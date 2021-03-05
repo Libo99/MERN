@@ -2,7 +2,7 @@ import React from 'react'
 import "./TodoList.css";
 
 
-function TodoList(props) {
+const TodoList = (props) => {
     const {todos} = props;
     return (
       <div className="list-container">
