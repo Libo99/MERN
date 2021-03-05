@@ -21,6 +21,11 @@ const TodoForm = () => {
     newTodos[i].completed = true;
     setTodos(newTodos);
   };
+  const removeTodo = (i) => {
+    const newTodos = [...todos];
+    newTodos.splice(i, 1);
+    setTodos(newTodos);
+  };
 
   const Handlesubmit = (e) => {
     e.preventDefault();
@@ -33,7 +38,11 @@ const TodoForm = () => {
       <h1 className="todo-header">You have {todos.length} todos</h1>
       <div className="todo-container">
         <div className="todoform">
-          <TodoList todos={todos} completeTodo={completeTodo} />
+          <TodoList
+            todos={todos}
+            completeTodo={completeTodo}
+            removeTodo={removeTodo}
+          />
           <form className="formtodo" onSubmit={Handlesubmit}>
             <label className="todolabel" htmlFor="todo">
               Add todo
@@ -45,7 +54,6 @@ const TodoForm = () => {
               value={todo}
               className="todoin"
             />
-            <button className="todobtn">Add</button>
           </form>
         </div>
       </div>

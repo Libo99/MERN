@@ -3,7 +3,7 @@ import "./TodoList.css";
 
 
 const TodoList = (props) => {
-    const {todos, completeTodo} = props;
+    const {todos, completeTodo, removeTodo} = props;
     return (
       <div className="list-container">
         <ul className="todolist">
@@ -12,7 +12,9 @@ const TodoList = (props) => {
               <li
                 key={todo.id}
                 style={{
-                  textDecoration: todo.completed ? "line-through black solid 3px" : "",
+                  textDecoration: todo.completed
+                    ? "line-through black solid 3px"
+                    : "",
                   color: "black",
                   fontSize: "1.3rem",
                 }}
@@ -21,6 +23,9 @@ const TodoList = (props) => {
               </li>
               <button className="todobtn" onClick={() => completeTodo(todo.id)}>
                 Complete
+              </button>
+              <button className="todobtn" onClick={() => removeTodo(todo.id)}>
+                X
               </button>
             </div>
           ))}
