@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./TodoForm.css";
 import TodoList from "./TodoList";
+import styles from './Todo.module.css';
 
 const TodoForm = () => {
   const [todo, setTodo] = useState("");
@@ -34,17 +35,17 @@ const TodoForm = () => {
     setTodo("");
   };
   return (
-    <div className="todo">
-      <h1 className="todo-header">You have {todos.length} todos</h1>
-      <div className="todo-container">
-        <div className="todoform">
+    <div className={styles.todo}>
+      <h1 className={styles.todoheader}>You have {todos.length} todos</h1>
+      <div className={styles.todocontainer}>
+        <div className={styles.todoform}>
           <TodoList
             todos={todos}
             completeTodo={completeTodo}
             removeTodo={removeTodo}
           />
-          <form className="formtodo" onSubmit={Handlesubmit}>
-            <label className="todolabel" htmlFor="todo">
+          <form className={styles.formtodo} onSubmit={Handlesubmit}>
+            <label className={styles.todolabel} htmlFor="todo">
               Add todo
             </label>
             <input
@@ -52,7 +53,7 @@ const TodoForm = () => {
               id="todo"
               onChange={(e) => setTodo(e.target.value)}
               value={todo}
-              className="todoin"
+              className={styles.todoin}
             />
           </form>
         </div>
