@@ -1,8 +1,13 @@
+/* Home component */
+
 .Homecontainer {
   overflow: hidden;
   margin: 0;
   padding: 0;
 }
+
+/* Header component */
+
 .heroheader {
   background-image: url("https://cdn.pixabay.com/photo/2016/11/18/18/37/programming-1836330_960_720.png");
   height: 90vh;
@@ -37,6 +42,8 @@
 .btn:hover {
   background-color: white;
 }
+
+/* About component */
 
 .About {
   overflow: hidden;
