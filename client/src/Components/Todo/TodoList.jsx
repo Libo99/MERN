@@ -1,14 +1,16 @@
 import React from 'react'
 import "./TodoList.css";
+import styles from "./Todo.module.css";
+
 
 
 const TodoList = (props) => {
     const {todos, completeTodo, removeTodo} = props;
     return (
-      <div className="list-container">
-        <ul className="todolist">
+      <div className={styles.listcontainer}>
+        <ul className={styles.todolist}>
           {todos.map((todo) => (
-            <div className="todos">
+            <div className={styles.todos}>
               <li
                 key={todo.id}
                 style={{
@@ -21,10 +23,16 @@ const TodoList = (props) => {
               >
                 {todo.text}
               </li>
-              <button className="todobtn" onClick={() => completeTodo(todo.id)}>
+              <button
+                className={styles.todobtn}
+                onClick={() => completeTodo(todo.id)}
+              >
                 Complete
               </button>
-              <button className="todobtn" onClick={() => removeTodo(todo.id)}>
+              <button
+                className={styles.todobtn}
+                onClick={() => removeTodo(todo.id)}
+              >
                 X
               </button>
             </div>
