@@ -13,7 +13,7 @@ const Header = () => {
         <h3 className={styles.herotext}>Welcome</h3>
       )}
       {!isAuthenticated ? (
-        <a href="SignUp">
+        <a href="SignUp" className={styles.link}>
           <button className={styles.btn}>Sign Up</button>
         </a>
       ) : null}
