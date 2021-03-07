@@ -25,10 +25,10 @@ db.once("open", function () {
 const config = {
   authRequired: false,
   auth0Logout: true,
-  secret: "p1q7de47KIaTGr3pHSC1P7OsOEETWi-AP-7uX2dj5ZupjQAEIiMjg66QrjRZsYna",
+  secret: process.env.SECRET,
   baseURL: "http://localhost:3000",
-  clientID: "i6J5GVMI3Ug4FB5l6aSy3lyh0Qq24F1j",
-  issuerBaseURL: "https://dev-yunbx83.us.auth0.com",
+  clientID: process.env.CLIENT_ID,
+  issuerBaseURL: process.env.ISSUER_BASE_URL,
 };
 
 app.use(cors());
