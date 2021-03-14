@@ -77,7 +77,7 @@
   
   
 } */
-.imgtitle{
+.imgtitle {
   font-size: 2rem;
 }
 .imgtext {
@@ -96,4 +96,17 @@
 
 .img:hover {
   opacity: 0.8;
+}
+
+@media only screen and (max-width: 768px) {
+  .content {
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+  }
+
+  .img{
+    width: 200px;
+    height: 200px;
+  }
 }
