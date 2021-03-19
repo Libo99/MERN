@@ -8,10 +8,10 @@ const TodoList = (props) => {
     return (
       <div className={styles.listcontainer}>
         <ul className={styles.todolist}>
-          {todos.map((todo) => (
+          {todos.map((todo, i) => (
             <div className={styles.todos}>
               <li
-                key={todo.id}
+                key={i}
                 style={{
                   textDecoration: todo.completed
                     ? "line-through black solid 3px"
@@ -24,13 +24,13 @@ const TodoList = (props) => {
               </li>
               <button
                 className={styles.todobtn}
-                onClick={() => completeTodo(todo.id)}
+                onClick={() => completeTodo(i)}
               >
                 Complete
               </button>
               <button
                 className={styles.todobtn}
-                onClick={() => removeTodo(todo.id)}
+                onClick={() => removeTodo(i)}
               >
                 X
               </button>
