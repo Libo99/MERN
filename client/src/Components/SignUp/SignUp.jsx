@@ -31,7 +31,9 @@ const SignUp = () => {
         </div>
         <div className={styles.formcontainer}>
           <form className={styles.form}>
-            <label className={styles.label} htmlFor="name">Name:</label>
+            <label className={styles.label} htmlFor="name">
+              Name:
+            </label>
             <input
               onChange={(e) => setName(e.target.value)}
               type="text"
@@ -41,7 +43,9 @@ const SignUp = () => {
               className={styles.input}
             />
 
-            <label className={styles.label} htmlFor="username">Username:</label>
+            <label className={styles.label} htmlFor="username">
+              Username:
+            </label>
             <input
               onChange={(e) => setUserName(e.target.value)}
               type="text"
@@ -51,7 +55,9 @@ const SignUp = () => {
               className={styles.input}
             />
 
-            <label className={styles.label} htmlFor="mail">Mail:</label>
+            <label className={styles.label} htmlFor="mail">
+              Mail:
+            </label>
             <input
               onChange={(e) => setMail(e.target.value)}
               type="email"
@@ -61,7 +67,9 @@ const SignUp = () => {
               className={styles.input}
             />
 
-            <label className={styles.label} htmlFor="password">Password:</label>
+            <label className={styles.label} htmlFor="password">
+              Password:
+            </label>
             <input
               onChange={(e) => setPassword(e.target.value)}
               type="password"
