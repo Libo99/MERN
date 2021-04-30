@@ -63,7 +63,7 @@ const Login = () => {
             <button className={styles.formbtn} type="submit">
               Login
             </button>
-            <LoginButton />
+            <LoginButton style={styles.formbtn} />
           </form>
         </div>
       </div>

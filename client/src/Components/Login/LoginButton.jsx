@@ -3,15 +3,16 @@ import { useAuth0 } from "@auth0/auth0-react";
 // import styles from "../Button.module.css";
 
 
-const LoginButton = () => {
+const LoginButton = (props) => {
   const { loginWithRedirect } = useAuth0();
+  const {style} = props;
 
   return (
-    <p
+    <button className={style} style={{fontSize: '1rem'}}
       onClick={() => loginWithRedirect()}
     >
-      Login
-    </p>
+      Login with google
+    </button>
   );
 };
 
